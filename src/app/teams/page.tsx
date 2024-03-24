@@ -63,14 +63,14 @@ const Teams = () => {
                 >
                   <Image
                     src={member.picture.large}
-                    alt={member.name.first}
+                    alt={`${member.name.first}${member.name.last}`}
                     width={200}
                     height={200}
                   />
                   <div className="sm:flex sm:flex-col sm:h-full">
                     <div>
                       <h3 className="font-medium text-gray-800 dark:text-gray-200">
-                        {`${member.name.first} ${member.name.last}`}
+                        {`${member.name.first}${member.name.last}`}
                       </h3>
                     </div>
                     <div className="flex gap-3 mt-2 justify-center">

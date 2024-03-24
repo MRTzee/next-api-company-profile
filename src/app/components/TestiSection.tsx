@@ -18,7 +18,9 @@ const TestiSection: React.FC = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=5");
+        const response = await fetch(
+          "https://randomuser.me/api/?results=5&nat=us"
+        );
         const data = await response.json();
         setTestimonials(data.results);
       } catch (error) {
@@ -51,7 +53,10 @@ const TestiSection: React.FC = () => {
                     <Card>
                       <CardContent className="flex flex-col aspect-square items-center text-center justify-center p-6 gap-6">
                         <Avatar className="w-[80px] h-[80px]">
-                          <AvatarImage src={testimonial.picture.large} />
+                          <AvatarImage
+                            src={testimonial.picture.large}
+                            alt={`${testimonial.name.first} ${testimonial.name.last}`}
+                          />
                           <AvatarFallback>
                             {testimonial.name.first.charAt(0)}
                           </AvatarFallback>
