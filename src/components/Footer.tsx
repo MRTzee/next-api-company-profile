@@ -23,10 +23,25 @@ const Footer: React.FC = () => {
               MRT<span className="text-black">zee</span>
             </h1>
           </div>
-          <ul className="flex flex-col md:flex-row gap-10 font-light text-lg py-10">
-            <li onClick={() => router.push("/about")}>About Us</li>
-            <li onClick={() => router.push("/services")}>Services</li>
-            <li onClick={() => router.push("/teams")}>Teams</li>
+          <ul className="flex flex-col md:flex-row gap-10 font-light text-md py-10">
+            <li
+              onClick={() => router.push("/about")}
+              className="cursor-pointer hover:font-bold"
+            >
+              About Us
+            </li>
+            <li
+              onClick={() => router.push("/services")}
+              className="cursor-pointer hover:font-bold"
+            >
+              Services
+            </li>
+            <li
+              onClick={() => router.push("/teams")}
+              className="cursor-pointer hover:font-bold"
+            >
+              Teams
+            </li>
           </ul>
         </div>
         <div className="flex flex-col md:flex-row md:justify-between">

@@ -1,16 +1,11 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 import { Button } from "./ui/button";
+import { AlignJustify } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
 const Navbar: React.FC = () => {
   const router = useRouter();
   return (
@@ -24,24 +19,45 @@ const Navbar: React.FC = () => {
         </h1>
         <div className="hidden md:block">
           <ul className="flex justify-end gap-5 font-light text-sm cursor-pointer">
-            <li onClick={() => router.push("/about")}>About Us</li>
-            <li onClick={() => router.push("/services")}>Services</li>
-            <li onClick={() => router.push("/teams")}>Teams</li>
+            <li
+              onClick={() => router.push("/about")}
+              className="cursor-pointer hover:font-bold"
+            >
+              About Us
+            </li>
+            <li
+              onClick={() => router.push("/services")}
+              className="cursor-pointer hover:font-bold"
+            >
+              Services
+            </li>
+            <li
+              onClick={() => router.push("/teams")}
+              className="cursor-pointer hover:font-bold"
+            >
+              Teams
+            </li>
           </ul>
         </div>
-        <DropdownMenu>
-          <DropdownMenuTrigger className="block md:hidden" asChild>
-            <Button variant="ghost">
-              <Menu />
+        <Sheet>
+          <SheetTrigger>
+            <AlignJustify />
+          </SheetTrigger>
+          <SheetContent className="flex flex-col gap-5 pt-14">
+            <Button variant="ghost" onClick={() => router.push("/")}>
+              <HomeIcon />
             </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuLabel>Menu</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Home</DropdownMenuItem>
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+            <Button onClick={() => router.push("/about")} variant="ghost">
+              About Us
+            </Button>
+            <Button onClick={() => router.push("/services")} variant="ghost">
+              Services
+            </Button>
+            <Button onClick={() => router.push("/teams")} variant="ghost">
+              Teams
+            </Button>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );

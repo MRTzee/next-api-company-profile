@@ -35,7 +35,7 @@ const TestiSection: React.FC = () => {
 
   return (
     <div className="bg-blue-100">
-      <h1 className="text-xl md:text-4xl font-bold text-center pt-8 md:pt-16">
+      <h1 className="text-3xl md:text-4xl font-bold text-center pt-8 md:pt-16">
         TESTIMONIAL
       </h1>
       <div className=" mx-auto py-8 md:py-14 flex justify-center">
@@ -44,7 +44,7 @@ const TestiSection: React.FC = () => {
         ) : (
           <Carousel
             opts={{ align: "start" }}
-            className="w-full max-w-64 md:max-w-5xl"
+            className="w-full max-w-72 md:max-w-5xl"
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
