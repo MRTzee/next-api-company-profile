@@ -6,4 +6,7 @@ interface User {
   picture: {
     large: string;
   };
+  location: {
+    country: string;
+  };
 }

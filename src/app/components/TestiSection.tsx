@@ -19,7 +19,7 @@ const TestiSection: React.FC = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          "https://randomuser.me/api/?results=5&nat=us"
+          "https://randomuser.me/api/?results=5&nat=us,in,cn"
         );
         const data = await response.json();
         setTestimonials(data.results);
@@ -62,7 +62,10 @@ const TestiSection: React.FC = () => {
                           </AvatarFallback>
                         </Avatar>
                         <div>
-                          <p>"Nothing"</p>
+                          <p>
+                            "I come from {testimonial.location.country} and this
+                            platform really helped me"
+                          </p>
                         </div>
                       </CardContent>
                     </Card>

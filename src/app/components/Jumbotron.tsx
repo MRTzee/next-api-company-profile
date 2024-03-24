@@ -21,7 +21,13 @@ const Jumbotron: React.FC = () => {
           </p>
         </motion.div>
         <div className="flex justify-center items-center md:order-1 mb-10">
-          <Image src="/landing6.svg" alt="landing" width={450} height={450} />
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <Image src="/landing6.svg" alt="landing" width={450} height={450} />
+          </motion.div>
         </div>
       </div>
     </div>
