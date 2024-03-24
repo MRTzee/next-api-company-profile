@@ -39,25 +39,27 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
         </div>
-        <Sheet>
-          <SheetTrigger>
-            <AlignJustify />
-          </SheetTrigger>
-          <SheetContent className="flex flex-col gap-5 pt-14">
-            <Button variant="ghost" onClick={() => router.push("/")}>
-              <HomeIcon />
-            </Button>
-            <Button onClick={() => router.push("/about")} variant="ghost">
-              About Us
-            </Button>
-            <Button onClick={() => router.push("/services")} variant="ghost">
-              Services
-            </Button>
-            <Button onClick={() => router.push("/teams")} variant="ghost">
-              Teams
-            </Button>
-          </SheetContent>
-        </Sheet>
+        <div className="block md:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <AlignJustify />
+            </SheetTrigger>
+            <SheetContent className="flex flex-col gap-5 pt-14">
+              <Button variant="ghost" onClick={() => router.push("/")}>
+                <HomeIcon />
+              </Button>
+              <Button onClick={() => router.push("/about")} variant="ghost">
+                About Us
+              </Button>
+              <Button onClick={() => router.push("/services")} variant="ghost">
+                Services
+              </Button>
+              <Button onClick={() => router.push("/teams")} variant="ghost">
+                Teams
+              </Button>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </nav>
   );
