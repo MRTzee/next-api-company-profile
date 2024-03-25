@@ -69,7 +69,7 @@ const Teams = () => {
               <Loading />
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-14">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
@@ -82,7 +82,7 @@ const Teams = () => {
                     height={200}
                     loading="lazy"
                   />
-                  <div className="sm:flex sm:flex-col sm:h-full">
+                  <div>
                     <div>
                       <h3 className="font-medium text-gray-800 dark:text-gray-200">
                         {`${member.name.first}${member.name.last}`}
