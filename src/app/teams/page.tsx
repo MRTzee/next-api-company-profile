@@ -13,7 +13,7 @@ const Teams = () => {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=9", {
+        const response = await fetch("https://randomuser.me/api/?results=8", {
           cache: "no-store",
         });
         const data = await response.json();
@@ -39,7 +39,7 @@ const Teams = () => {
             <Loading />
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-2 gap-10">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -48,7 +48,7 @@ const Teams = () => {
                 <Image
                   src={member.picture.large}
                   alt={`${member.name.first} ${member.name.last}`}
-                  width={300}
+                  width={200}
                   height={200}
                   loading="lazy"
                 />
