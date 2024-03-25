@@ -33,33 +33,6 @@ const Footer: React.FC = () => {
             </li>
           </ul> */}
         </div>
-        <div className="grid grid-cols-1">
-          <div>
-            <h1 className="font-light text-xs md:text-sm">
-              MRTzee Diawasi oleh Kemendikbud
-            </h1>
-            <h1 className="font-light text-xs md:text-sm">
-              MRTzee Diawasi oleh Kemenag
-            </h1>
-          </div>
-          <ul className="flex gap-5 font-light text-xs md:text-sm mt-4 cursor-pointer">
-            <li>
-              <FacebookIcon />
-            </li>
-            <li>
-              <InstagramIcon />
-            </li>
-            <li>
-              <GithubIcon />
-            </li>
-            <li>
-              <YoutubeIcon />
-            </li>
-            <li>
-              <TwitchIcon />
-            </li>
-          </ul>
-        </div>
       </div>
       <div className="mx-auto px-4 md:px-32 text-left bg-blue-800 py-3 text-white">
         <p className="text-xs md:text-sm font-light">
