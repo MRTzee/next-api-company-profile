@@ -14,7 +14,7 @@ const Teams = () => {
     const fetchTeamMembers = async () => {
       try {
         const response = await fetch("https://randomuser.me/api/?results=9", {
-          next: { revalidate: 20 },
+          cache: "no-store",
         });
         const data = await response.json();
         setTeamMembers(data.results);

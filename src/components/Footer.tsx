@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
         </p>
       </div>
       <div className="mx-auto px-4 md:px-32 text-left bg-blue-950 py-3 text-white">
-        <p className="text-xs md:text-sm font-light">@copyright MRTzee</p>
+        <p className="text-xs md:text-sm font-light">&copy; MRTzee</p>
       </div>
     </footer>
   );
