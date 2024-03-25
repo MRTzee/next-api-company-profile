@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             </li>
           </ul> */}
         </div>
-        <div className="flex flex-col">
+        <div className="grid grid-cols-1">
           <div>
             <h1 className="font-light text-xs md:text-sm">
               MRTzee Diawasi oleh Kemendikbud
