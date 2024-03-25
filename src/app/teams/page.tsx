@@ -56,8 +56,8 @@ const Teams = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="max-w-6xl mx-auto text-center mb-10 lg:mb-14">
+      <div className="max-w-[85rem] px-4 py-10 mx-auto">
+        <div className="max-w-6x mx-auto text-center mb-10">
           <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
             Meet the crew
           </h2>
@@ -73,17 +73,15 @@ const Teams = () => {
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="grid items-center gap-y-3 gap-x-4 mt-10"
+                  className="flex flex-col justify-center items-center gap-4 mt-10"
                 >
-                  <div className="flex justify-center">
-                    <Image
-                      src={member.picture.large}
-                      alt={`${member.name.first} ${member.name.last}`}
-                      width={300}
-                      height={200}
-                      loading="lazy"
-                    />
-                  </div>
+                  <Image
+                    src={member.picture.large}
+                    alt={`${member.name.first} ${member.name.last}`}
+                    width={300}
+                    height={200}
+                    loading="lazy"
+                  />
                   <div>
                     <div>
                       <h3 className="font-medium text-gray-800 dark:text-gray-200">
