@@ -34,42 +34,42 @@ const Teams = () => {
       <div className="max-w-6xl mx-auto text-center mb-10 px-4 py-10">
         <h2 className="text-2xl font-bold md:text-4xl ">Meet the crew</h2>
         <p className=" text-gray-600 ">Creative people</p>
-        {isLoading ? (
+        {/* {isLoading ? (
           <div className="flex justify-center mt-10">
             <Loading />
           </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-10">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="flex flex-col justify-center items-center gap-4 mt-10"
-              >
-                <Image
-                  src={member.picture.large}
-                  alt={`${member.name.first} ${member.name.last}`}
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                />
+        ) : ( */}
+        <div className="grid grid-cols-2 gap-10">
+          {teamMembers?.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center items-center gap-4 mt-10"
+            >
+              <Image
+                src={member.picture.large}
+                alt={`${member.name.first} ${member.name.last}`}
+                width={200}
+                height={200}
+                loading="lazy"
+              />
+              <div>
                 <div>
-                  <div>
-                    <h3 className="font-medium text-gray-800 dark:text-gray-200">
-                      {`${member.name.first}${member.name.last}`}
-                    </h3>
-                  </div>
-                  <div className="flex gap-3 mt-2 justify-center">
-                    <FacebookIcon />
-                    <InstagramIcon />
-                    <GithubIcon />
-                  </div>
+                  <h3 className="font-medium text-gray-800 dark:text-gray-200">
+                    {`${member.name.first}${member.name.last}`}
+                  </h3>
+                </div>
+                <div className="flex gap-3 mt-2 justify-center">
+                  <FacebookIcon />
+                  <InstagramIcon />
+                  <GithubIcon />
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+            </div>
+          ))}
+        </div>
+        {/* )} */}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
