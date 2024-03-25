@@ -13,7 +13,7 @@ const Teams = () => {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=12");
+        const response = await fetch("https://randomuser.me/api/?results=9");
         const data = await response.json();
         setTeamMembers(data.results);
       } catch (error) {
@@ -69,19 +69,21 @@ const Teams = () => {
               <Loading />
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-14">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
                   className="grid items-center gap-y-3 gap-x-4 mt-10"
                 >
-                  <Image
-                    src={member.picture.large}
-                    alt={`${member.name.first}${member.name.last}`}
-                    width={200}
-                    height={200}
-                    loading="lazy"
-                  />
+                  <div className="flex justify-center">
+                    <Image
+                      src={member.picture.large}
+                      alt={`${member.name.first}${member.name.last}`}
+                      width={200}
+                      height={200}
+                      loading="lazy"
+                    />
+                  </div>
                   <div>
                     <div>
                       <h3 className="font-medium text-gray-800 dark:text-gray-200">
