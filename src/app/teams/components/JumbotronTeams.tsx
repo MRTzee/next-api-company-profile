@@ -13,6 +13,7 @@ const JumbotronTeams = () => {
             transition={{ duration: 1 }}
           >
             <h1 className="text-3xl md:text-6xl font-semibold">OUR TEAMS</h1>
+            <p className="text-lg md:text-xl mt-6">Always Work</p>
           </motion.div>
         </div>
         <div className="flex justify-center items-center md:order-1 mb-10">
