@@ -78,8 +78,8 @@ const Teams = () => {
                   <div className="flex justify-center">
                     <Image
                       src={member.picture.large}
-                      alt={`${member.name.first}${member.name.last}`}
-                      width={200}
+                      alt={`${member.name.first} ${member.name.last}`}
+                      width={300}
                       height={200}
                       loading="lazy"
                     />
