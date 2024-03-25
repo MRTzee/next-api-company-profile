@@ -27,7 +27,7 @@ const Teams = () => {
   return (
     <>
       <JumbotronAbout />
-      <div className="max-w-6xl mx-auto text-center mb-10 px-4 py-10">
+      <div className="max-w-6xl mx-auto text-center mb-10 px-4 py-10 mt-10">
         <h2 className="text-2xl font-bold md:text-4xl ">Meet the crew</h2>
         <p className=" text-gray-600 ">Creative people</p>
 
