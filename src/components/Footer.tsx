@@ -34,12 +34,6 @@ const Footer: React.FC = () => {
           </ul> */}
         </div>
       </div>
-      <div className="mx-auto px-4 md:px-32 text-left bg-blue-800 py-3 text-white">
-        <p className="text-xs md:text-sm font-light">
-          Terima kasih sudah mampir! Laman ini lebih nyaman dinikmati di ponsel
-          pintar. Coba sekarang untuk pengalaman yang lebih maksimal.
-        </p>
-      </div>
       <div className="mx-auto px-4 md:px-32 text-left bg-blue-950 py-3 text-white">
         <p className="text-xs md:text-sm font-light">&copy; MRTzee</p>
       </div>
