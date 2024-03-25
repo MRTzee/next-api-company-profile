@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 const PriceCard = () => {
@@ -79,9 +80,9 @@ const PriceCard = () => {
                 </li>
               ))}
             </ul>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+            <Button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
               {plan.buttonText}
-            </button>
+            </Button>
           </div>
         </div>
       ))}

@@ -1,41 +1,29 @@
-"use client";
 import React from "react";
-import { useRouter } from "next/navigation";
 import { HomeIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { AlignJustify } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  const router = useRouter();
   return (
     <nav className="container mx-auto px-4 md:px-32 py-4 ">
       <div className="flex justify-between items-center">
-        <h1
-          className="font-bold text-3xl cursor-pointer"
-          onClick={() => router.push("/")}
-        >
-          MRT<span className="text-blue-500">zee</span>
-        </h1>
+        <Link href="/">
+          <h1 className="font-bold text-3xl cursor-pointer">
+            MRT<span className="text-blue-500">zee</span>
+          </h1>
+        </Link>
         <div className="hidden md:block">
           <ul className="flex justify-end gap-5 font-light text-sm cursor-pointer">
-            <li
-              onClick={() => router.push("/about")}
-              className="cursor-pointer hover:font-bold"
-            >
-              About Us
+            <li className="cursor-pointer hover:font-bold">
+              <Link href="/about">About Us</Link>
             </li>
-            <li
-              onClick={() => router.push("/services")}
-              className="cursor-pointer hover:font-bold"
-            >
-              Services
+            <li className="cursor-pointer hover:font-bold">
+              <Link href="services">Services</Link>
             </li>
-            <li
-              onClick={() => router.push("/teams")}
-              className="cursor-pointer hover:font-bold"
-            >
-              Teams
+            <li className="cursor-pointer hover:font-bold">
+              <Link href="/teams">Teams</Link>
             </li>
           </ul>
         </div>
@@ -45,17 +33,19 @@ const Navbar: React.FC = () => {
               <AlignJustify />
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-5 pt-14">
-              <Button variant="ghost" onClick={() => router.push("/")}>
-                <HomeIcon />
+              <Button variant="ghost">
+                <Link href="/">
+                  <HomeIcon />
+                </Link>
               </Button>
-              <Button onClick={() => router.push("/about")} variant="ghost">
-                About Us
+              <Button variant="ghost">
+                <Link href="/about">About Us</Link>
               </Button>
-              <Button onClick={() => router.push("/services")} variant="ghost">
-                Services
+              <Button variant="ghost">
+                <Link href="/services">Services</Link>
               </Button>
-              <Button onClick={() => router.push("/teams")} variant="ghost">
-                Teams
+              <Button variant="ghost">
+                <Link href="/teams">Teams</Link>
               </Button>
             </SheetContent>
           </Sheet>
