@@ -56,6 +56,7 @@ const TestiSection: React.FC = () => {
                           <AvatarImage
                             src={testimonial.picture.large}
                             alt={`${testimonial.name.first} ${testimonial.name.last}`}
+                            loading="lazy"
                           />
                           <AvatarFallback>
                             {testimonial.name.first.charAt(0)}

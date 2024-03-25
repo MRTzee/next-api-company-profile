@@ -13,7 +13,7 @@ const Teams = () => {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=20");
+        const response = await fetch("https://randomuser.me/api/?results=12");
         const data = await response.json();
         setTeamMembers(data.results);
       } catch (error) {
@@ -50,6 +50,7 @@ const Teams = () => {
                 alt="landing"
                 width={450}
                 height={450}
+                loading="lazy"
               />
             </motion.div>
           </div>
@@ -79,6 +80,7 @@ const Teams = () => {
                     alt={`${member.name.first}${member.name.last}`}
                     width={200}
                     height={200}
+                    loading="lazy"
                   />
                   <div className="sm:flex sm:flex-col sm:h-full">
                     <div>

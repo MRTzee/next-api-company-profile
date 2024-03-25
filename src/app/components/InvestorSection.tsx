@@ -44,6 +44,7 @@ const InvestorSection: React.FC = () => {
                 className="border-4 border-blue-500 rounded-full"
                 width={300}
                 height={300}
+                loading="lazy"
               />
               <p className="font-semibold text-xl mt-4">{`${investor.name.first} ${investor.name.last}`}</p>
             </div>

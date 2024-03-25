@@ -26,7 +26,13 @@ const Jumbotron: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <Image src="/landing6.svg" alt="landing" width={450} height={450} />
+            <Image
+              src="/landing6.svg"
+              alt="landing"
+              width={450}
+              height={450}
+              loading="lazy"
+            />
           </motion.div>
         </div>
       </div>

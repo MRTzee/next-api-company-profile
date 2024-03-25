@@ -45,6 +45,7 @@ const Services = () => {
                 alt="landing"
                 width={500}
                 height={500}
+                loading="lazy"
               />
             </motion.div>
           </div>

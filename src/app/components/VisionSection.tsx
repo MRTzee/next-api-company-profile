@@ -12,6 +12,7 @@ const VisionSection: React.FC = () => {
               alt="landing2"
               width={500}
               height={450}
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col gap-5 md:text-left text-center md:mt-10 mt-0">

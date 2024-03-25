@@ -32,6 +32,7 @@ const About = () => {
                 alt="landing"
                 width={400}
                 height={400}
+                loading="lazy"
               />
             </motion.div>
           </div>
