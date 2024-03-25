@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const JumbotronAbout = () => {
+const JumbotronTeams = () => {
   return (
     <div className="mx-auto py-4 bg-blue-500 text-white px-4 md:px-32">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -35,4 +35,4 @@ const JumbotronAbout = () => {
   );
 };
 
-export default JumbotronAbout;
+export default JumbotronTeams;

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { FacebookIcon, GithubIcon, InstagramIcon } from "lucide-react";
 import Image from "next/image";
-import JumbotronAbout from "./components/JumbotronAbout";
+import JumbotronAbout from "./components/JumbotronTeams";
 
 const Teams = () => {
   const [teamMembers, setTeamMembers] = useState<User[]>([]);
@@ -60,7 +60,7 @@ const Teams = () => {
           ))}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

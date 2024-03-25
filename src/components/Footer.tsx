@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               </h1>
             </Link>
           </div>
-          <ul className="flex flex-col md:flex-row gap-10 font-light text-md py-10">
+          {/* <ul className="flex flex-col md:flex-row gap-10 font-light text-md py-10">
             <li className="cursor-pointer hover:font-bold">
               <Link href="/about">About Us</Link>
             </li>
@@ -31,9 +31,9 @@ const Footer: React.FC = () => {
             <li className="cursor-pointer hover:font-bold">
               <Link href="/teams">Teams</Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between">
+        <div className="flex flex-col">
           <div>
             <h1 className="font-light text-xs md:text-sm">
               MRTzee Diawasi oleh Kemendikbud
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               MRTzee Diawasi oleh Kemenag
             </h1>
           </div>
-          <ul className="flex flex-wrap gap-5 font-light text-xs md:text-sm mt-4">
+          <ul className="flex gap-5 font-light text-xs md:text-sm mt-4 cursor-pointer">
             <li>
               <FacebookIcon />
             </li>
