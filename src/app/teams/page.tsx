@@ -31,7 +31,7 @@ const Teams = () => {
         <h2 className="text-2xl font-bold md:text-4xl ">Meet the crew</h2>
         <p className=" text-gray-600 ">Creative people</p>
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
           {teamMembers?.map((member, index) => (
             <div
               key={index}
@@ -60,7 +60,7 @@ const Teams = () => {
           ))}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
